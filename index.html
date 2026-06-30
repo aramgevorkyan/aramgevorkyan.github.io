@@ -9,14 +9,14 @@
     --text: #111;
     --muted: #666;
     --accent: #2563eb;
-    --bg: #ffffff;
+    --border: #e5e5e5;
 }
 
 body {
     margin: 0;
-    background: var(--bg);
-    color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #fff;
+    color: var(--text);
     line-height: 1.6;
 }
 
@@ -38,12 +38,7 @@ h1 {
 
 .subtitle {
     color: var(--muted);
-    font-size: 16px;
     margin-top: 8px;
-}
-
-section {
-    margin-bottom: 50px;
 }
 
 h2 {
@@ -52,14 +47,11 @@ h2 {
     letter-spacing: 2px;
     color: var(--muted);
     margin-bottom: 15px;
+    margin-top: 50px;
 }
 
 p {
     max-width: 700px;
-}
-
-.card {
-    padding: 10px 0;
 }
 
 a {
@@ -71,20 +63,53 @@ a:hover {
     text-decoration: underline;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-}
-
+/* BADGES */
 .badge {
     display: inline-block;
     padding: 4px 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border);
     border-radius: 20px;
     font-size: 12px;
     margin: 4px 6px 0 0;
     color: var(--muted);
+}
+
+/* DOCUMENT CARDS */
+.docs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.doc-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+}
+
+.doc-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.doc-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.doc-meta {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* PROJECTS */
+.project {
+    padding: 8px 0;
+    color: var(--text);
 }
 
 footer {
@@ -121,25 +146,42 @@ footer {
     <span class="badge">Linux</span>
     <span class="badge">Networking</span>
     <span class="badge">Python</span>
-    <span class="badge">System Design</span>
+    <span class="badge">System Thinking</span>
 </section>
 
 <section>
     <h2>Projects</h2>
 
-    <div class="card">→ Network Access Monitor (in progress)</div>
-    <div class="card">→ Password Strength Analyzer</div>
-    <div class="card">→ Python automation scripts</div>
+    <div class="project">→ Network Access Monitor (in progress)</div>
+    <div class="project">→ Password Strength Analyzer</div>
+    <div class="project">→ Python automation scripts</div>
 </section>
 
 <section>
     <h2>Documents</h2>
 
-    <div class="grid">
-        <div>📄 <a href="documents/cv.pdf">CV</a></div>
-        <div>📄 <a href="documents/cover_letter.pdf">Cover Letter</a></div>
-        <div>📄 <a href="documents/toefl.pdf">TOEFL Score</a></div>
-        <div>📄 <a href="documents/duolingo_test.pdf">Duolingo Test</a></div>
+    <div class="docs-grid">
+
+        <a class="doc-card" href="documents/cv.pdf" target="_blank">
+            <div class="doc-title">Curriculum Vitae</div>
+            <div class="doc-meta">PDF · Profile & experience</div>
+        </a>
+
+        <a class="doc-card" href="documents/cover_letter.pdf" target="_blank">
+            <div class="doc-title">Cover Letter</div>
+            <div class="doc-meta">PDF · Motivation for Cybersecurity</div>
+        </a>
+
+        <a class="doc-card" href="documents/toefl.pdf" target="_blank">
+            <div class="doc-title">TOEFL Score</div>
+            <div class="doc-meta">PDF · English proficiency</div>
+        </a>
+
+        <a class="doc-card" href="documents/duolingo_test.pdf" target="_blank">
+            <div class="doc-title">Duolingo Test</div>
+            <div class="doc-meta">PDF · Alternative English certificate</div>
+        </a>
+
     </div>
 </section>
 
@@ -147,13 +189,11 @@ footer {
     <h2>GitHub</h2>
 
     <p>
-        <a href="https://github.com/aramgevorkyan">github.com/aramgevorkyan</a>
+        <a href="https://github.com/aramgevorkyan" target="_blank">
+            github.com/aramgevorkyan
+        </a>
     </p>
 </section>
-
-<footer>
-    Built as a minimal developer portfolio · GitHub Pages
-</footer>
 
 </div>
 
