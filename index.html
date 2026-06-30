@@ -5,35 +5,65 @@
 <title>Aram Gevorkyan</title>
 
 <style>
+:root {
+    --text: #111;
+    --muted: #666;
+    --accent: #2563eb;
+    --bg: #ffffff;
+}
+
 body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 0 20px;
     line-height: 1.6;
-    color: #111;
+}
+
+.container {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 24px;
+}
+
+header {
+    margin-bottom: 50px;
 }
 
 h1 {
-    font-size: 28px;
-    margin-bottom: 5px;
+    font-size: 36px;
+    margin: 0;
+    letter-spacing: -0.5px;
 }
 
 .subtitle {
-    color: #555;
-    margin-bottom: 30px;
+    color: var(--muted);
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+section {
+    margin-bottom: 50px;
 }
 
 h2 {
-    margin-top: 40px;
-    font-size: 14px;
+    font-size: 13px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #555;
+    letter-spacing: 2px;
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+p {
+    max-width: 700px;
+}
+
+.card {
+    padding: 10px 0;
 }
 
 a {
-    color: #2563eb;
+    color: var(--accent);
     text-decoration: none;
 }
 
@@ -41,67 +71,90 @@ a:hover {
     text-decoration: underline;
 }
 
-.card {
-    padding: 12px 0;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
 }
 
-hr {
-    margin: 30px 0;
-    border: none;
-    border-top: 1px solid #eee;
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 4px 6px 0 0;
+    color: var(--muted);
+}
+
+footer {
+    margin-top: 80px;
+    color: var(--muted);
+    font-size: 13px;
 }
 </style>
 </head>
 
 <body>
 
-<h1>Aram Gevorkyan</h1>
-<div class="subtitle">
-Aspiring Computer Science & Cybersecurity Student · Germany
-</div>
+<div class="container">
 
-<p>
-I am interested in understanding how computer systems work, how data flows through them, and how they can be analyzed and secured.
-</p>
+<header>
+    <h1>Aram Gevorkyan</h1>
+    <div class="subtitle">
+        Aspiring Cybersecurity & Computer Science Student · Germany
+    </div>
+</header>
 
-<hr>
+<section>
+    <h2>About</h2>
+    <p>
+        I am interested in computer systems, networking, and cybersecurity.
+        My focus is understanding how systems operate, how data flows, and how security mechanisms protect them.
+    </p>
+</section>
 
-<h2>Application Documents</h2>
+<section>
+    <h2>Focus Areas</h2>
 
-<div class="card">
-📄 <a href="documents/cv.pdf">Curriculum Vitae</a>
-</div>
+    <span class="badge">Cybersecurity</span>
+    <span class="badge">Linux</span>
+    <span class="badge">Networking</span>
+    <span class="badge">Python</span>
+    <span class="badge">System Design</span>
+</section>
 
-<div class="card">
-📄 <a href="documents/cover_letter.pdf">Cover Letter</a>
-</div>
+<section>
+    <h2>Projects</h2>
 
-<div class="card">
-📄 <a href="documents/toefl.pdf">TOEFL Score Report</a>
-</div>
+    <div class="card">→ Network Access Monitor (in progress)</div>
+    <div class="card">→ Password Strength Analyzer</div>
+    <div class="card">→ Python automation scripts</div>
+</section>
 
-<div class="card">
-📄 <a href="documents/duolingo_test.pdf">Duolingo English Test</a>
-</div>
+<section>
+    <h2>Documents</h2>
 
-<hr>
+    <div class="grid">
+        <div>📄 <a href="cv.pdf">CV</a></div>
+        <div>📄 <a href="cover_letter.pdf">Cover Letter</a></div>
+        <div>📄 <a href="toefl.pdf">TOEFL Score</a></div>
+        <div>📄 <a href="duolingo_test.pdf">Duolingo Test</a></div>
+    </div>
+</section>
 
-<h2>Focus</h2>
+<section>
+    <h2>GitHub</h2>
 
-<div class="card">
-• Cybersecurity fundamentals<br>
-• Linux systems<br>
-• Python programming<br>
-• Networking basics<br>
-• Structured problem solving
-</div>
+    <p>
+        <a href="https://github.com/aramgevorkyan">github.com/aramgevorkyan</a>
+    </p>
+</section>
 
-<hr>
+<footer>
+    Built as a minimal developer portfolio · GitHub Pages
+</footer>
 
-<h2>GitHub</h2>
-
-<div class="card">
-<a href="https://github.com/aramgevorkyan">github.com/aramgevorkyan</a>
 </div>
 
 </body>
